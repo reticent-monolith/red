@@ -1,0 +1,101 @@
+.red.item.sheet form {
+  display: flex;
+  flex-direction: column;
+}
+.red.item.sheet .sheet-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.red.item.sheet .sheet-content .editor {
+  height: 100%;
+}
+.red.actor.sheet .sheet-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 10% repeat(3, 1fr);
+  grid-template-rows: 70% 10% 1fr;
+  grid-template-areas: "character stat skill skill skill" "humanity stat skill skill skill" "health health combat combat combat";
+}
+.red.actor.sheet .sheet-content .info-block {
+  grid-area: character;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  height: 70%;
+  max-width: 300px;
+  min-width: 200px;
+}
+.red.actor.sheet .sheet-content .info-block .info-unit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.red.actor.sheet .sheet-content .info-block .info-unit label {
+  min-width: 70px;
+}
+.red.actor.sheet .sheet-content .info-block .info-unit input#rank {
+  width: 30px;
+  text-align: center;
+}
+.red.actor.sheet .sheet-content .stat-block {
+  grid-area: stat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 80%;
+  max-width: 50px;
+  min-width: 50px;
+}
+.red.actor.sheet .sheet-content .stat-block .stat-unit {
+  display: flex;
+  flex-direction: column;
+}
+.red.actor.sheet .sheet-content .stat-block .stat-unit input {
+  width: 50px;
+  text-align: center;
+  font-size: 2em;
+}
+.red.actor.sheet .sheet-content .stat-block .stat-unit .resource-block {
+  display: flex;
+  justify-content: space-between;
+}
+.red.actor.sheet .sheet-content .humanity-block {
+  grid-area: humanity;
+  display: flex;
+}
+.red.actor.sheet .sheet-content .humanity-block .resource-unit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10%;
+}
+.red.actor.sheet .sheet-content .humanity-block .resource-unit label {
+  min-width: 70px;
+}
+.red.actor.sheet .sheet-content .humanity-block .resource-unit input {
+  width: 30px;
+  text-align: center;
+}
+.red.actor.sheet .sheet-content .health-block {
+  grid-area: health;
+}
+.red.actor.sheet .sheet-content .health-block .resource-unit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 20%;
+}
+.red.actor.sheet .sheet-content .health-block .resource-unit label {
+  min-width: 70px;
+}
+.red.actor.sheet .sheet-content .health-block .resource-unit input {
+  width: 30px;
+  text-align: center;
+}
+.red.actor.sheet .sheet-content .num-input {
+  width: 30px;
+  text-align: center;
+}

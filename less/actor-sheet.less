@@ -1,0 +1,78 @@
+.red.actor.sheet {
+  .sheet-content {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 10% repeat(3, 1fr);
+    grid-template-rows: 70% 10% 1fr;
+    grid-template-areas: 
+      "character stat skill skill skill"
+      "humanity stat skill skill skill"
+      "health health combat combat combat";
+    .info-block {
+      grid-area: character;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 20%;
+      height: 70%;
+      max-width: 300px;
+      min-width: 200px;
+      .info-unit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        label {min-width: 70px};
+        input#rank {width: 30px; text-align: center;};
+        // textarea {min-height: 250px}
+      }
+    };
+    .stat-block {
+      grid-area: stat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50px;
+      height: 80%;
+      max-width: 50px;
+      min-width: 50px;
+      .stat-unit {
+        display: flex;
+        flex-direction: column;
+        input {width: 50px; text-align: center; font-size: 2em;};
+        .resource-block {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    };
+    .humanity-block {
+      grid-area: humanity;
+      display: flex;
+      .resource-unit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10%;
+        label {min-width: 70px};
+        input {width: 30px; text-align: center;};
+      }
+    };
+    .health-block {
+      grid-area: health;
+      .resource-unit {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 20%;
+        label {min-width: 70px};
+        input {width: 30px; text-align: center;};
+      }
+    };
+    // .skill-block {
+    //   font-size: 12px;
+    // };
+    .num-input {width: 30px; text-align: center};
+  }
+}
+
+

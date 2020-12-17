@@ -1,0 +1,468 @@
+{
+  "Actor": {
+    "types": ["edgerunner", "blackice", "npc"],
+    "edgerunner": {
+      "stats": {
+        "body": 6,
+        "ref": 6,
+        "move": 6,
+        "dex": 6,
+        "int": 6,
+        "emp": {"value":6, "max": 6},
+        "cool": 6,
+        "tech": 6,
+        "luck": {"value":6, "max": 6},
+        "will": 6
+      },
+      "role": "",
+      "roleAbility": "",
+      "roleAbilityRank": 4,
+      "notes": "",
+      "humanity": {
+        "min": 0,
+        "max": 0,
+        "value": 0
+      },
+      "hitpoints": {
+        "min": 0,
+        "max": 0,
+        "value": 0
+      },
+      "criticalInjuries": [],
+      "addictions": [],
+      "skills": {
+        "concentration": {
+          "name": "Concentration",
+          "lvl": 2,
+          "stat": "int",
+          "cost": 1
+        },
+        "concealRevealObject": {
+          "name": "Conceal/Reveal Object",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "lipReading": {
+          "name": "Lip Reading",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "perception": {
+          "name": "Perception",
+          "lvl": 2,
+          "stat": "int",
+          "cost": 1
+        },
+        "tracking": {
+          "name": "Tracking",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "athletics": {
+          "name": "Athletics",
+          "lvl": 2,
+          "stat": "dex",
+          "cost": 1
+        },
+        "contortionist": {
+          "name": "Contortionist",
+          "lvl": 0,
+          "stat": "dex",
+          "cost": 1
+        },
+        "dance": {
+          "name": "Dance",
+          "lvl": 0,
+          "stat": "dex",
+          "cost": 1
+        },
+        "endurance": {
+          "name": "Endurance",
+          "lvl": 0,
+          "stat": "will",
+          "cost": 1
+        },
+        "resistTortureDrugs": {
+          "name": "Resist Torture/Drugs",
+          "lvl": 0,
+          "stat": "will",
+          "cost": 1
+        },
+        "stealth": {
+          "name": "Stealth",
+          "lvl": 2,
+          "stat": "dex",
+          "cost": 1
+        },
+        "driveLandVehicle": {
+          "name": "Drive Land Vehicle",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "pilotAirVehicle": {
+          "name": "Pilot Air Vehicle",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "pilotSeaVehicle": {
+          "name": "Pilot Sea Vehicle",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "riding": {
+          "name": "Riding",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "accounting": {
+          "name": "Accounting",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "animalHandling": {
+          "name": "Animal Handling",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "bureaucracy": {
+          "name": "Bureaucracy",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "business": {
+          "name": "Business",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "composition": {
+          "name": "Composition",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "criminology": {
+          "name": "Criminology",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "cryptography": {
+          "name": "Cryptograohy",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "deduction": {
+          "name": "Deduction",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "education": {
+          "name": "Education",
+          "lvl": 2,
+          "stat": "int",
+          "cost": 1
+        },
+        "gamble": {
+          "name": "Gamble",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "librarySearch": {
+          "name": "Library Search",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "tactics": {
+          "name": "Tactics",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "wildernessSurvival": {
+          "name": "Wilderness Survival",
+          "lvl": 0,
+          "stat": "int",
+          "cost": 1
+        },
+        "brawling": {
+          "name": "Brawling",
+          "lvl": 2,
+          "stat": "dex",
+          "cost": 1
+        },
+        "evasion": {
+          "name": "Evasion",
+          "lvl": 2,
+          "stat": "dex",
+          "cost": 1
+        },
+        "martialArts": {
+          "name": "Martial Arts",
+          "lvl": 0,
+          "stat": "dex",
+          "cost": 2,
+          "known": {}
+        },
+        "meleeWeapon": {
+          "name": "Melee Weapon",
+          "lvl": 0,
+          "stat": "dex",
+          "cost": 1
+        },
+        "acting": {
+          "name": "Acting",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "archery": {
+          "name": "Archery",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "autofire": {
+          "name": "Autofire",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 2
+        },
+        "handgun": {
+          "name": "Handgun",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "heavyWeapons": {
+          "name": "Heavy Weapons",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 2
+        },
+        "shoulderArms": {
+          "name": "Shoulder Arms",
+          "lvl": 0,
+          "stat": "ref",
+          "cost": 1
+        },
+        "bribery": {
+          "name": "Bribery",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "conversation": {
+          "name": "Conversation",
+          "lvl": 2,
+          "stat": "emp",
+          "cost": 1
+        },
+        "humanPerception": {
+          "name": "Human Perception",
+          "lvl": 2,
+          "stat": "emp",
+          "cost": 1
+        },
+        "interrogation": {
+          "name": "Interrogation",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "persuasion": {
+          "name": "Persuasion",
+          "lvl": 2,
+          "stat": "cool",
+          "cost": 1
+        },
+        "personalGrooming": {
+          "name": "Personal Grooming",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "streetwise": {
+          "name": "Streetwise",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "trading": {
+          "name": "Trading",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "wardrobeAndStyle": {
+          "name": "Wardrobe & Style",
+          "lvl": 0,
+          "stat": "cool",
+          "cost": 1
+        },
+        "airVehicleTech": {
+          "name": "Air Vehicle Tech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "basicTech": {
+          "name": "Basic Tech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "cybertech": {
+          "name": "Cybertech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "demolitions": {
+          "name": "Demolitions",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 2
+        },
+        "electronicsSecurityTech": {
+          "name": "Electronics/Security Tech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "firstAid": {
+          "name": "First Aid",
+          "lvl": 2,
+          "stat": "tech",
+          "cost": 1
+        },
+        "forgery": {
+          "name": "Forgery",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "landVehicleTech": {
+          "name": "Land Vehicle Tech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "paintDrawSculpt": {
+          "name": "Paint/Draw/Sculpt",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "paramedic": {
+          "name": "Paramedic",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 2
+        },
+        "photographyFilm": {
+          "name": "Photography/Film",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "pickLock": {
+          "name": "Pick Lock",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "pickPocket": {
+          "name": "Pick Pocket",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "seaVehicleTech": {
+          "name": "Sea Vehicle Tech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        },
+        "weaponsTech": {
+          "name": "Weapons Tech",
+          "lvl": 0,
+          "stat": "tech",
+          "cost": 1
+        }
+      },
+      "multiSkills": {
+        "language": {
+          "name": "Language",
+          "cost": 1,
+          "stat": "int",
+          "known": {
+            "streetslang": 2
+          }
+        },
+        "localExpert": {
+          "name": "Local Expert",
+          "cost": 1,
+          "stat": "int",
+          "known": {
+            "yourHome": 2
+          }
+        },
+        "science": {
+          "name": "Science",
+          "cost": 1,
+          "stat": "int",
+          "known": {}
+        },
+        "playInstrument": {
+          "name": "Play Instrument",
+          "cost": 1,
+          "stat": "tech",
+          "known": {}
+        }
+      },
+      "inventory": {
+        "equipped": {
+          "armorHead": "",
+          "armorBody": "",
+          "weaponPrimary": "",
+          "weaponSecondary": ""
+        },
+        "weapons": [],
+        "armor": [],
+        "gear": [],
+        "cash": 0
+      }
+    }  
+  },
+  "Item": {
+    "types": ["weapon", "armor"],
+    "weapon": {
+      "damage": "3d6",
+      "attackSkill": "Handgun",
+      "rof": 2,
+      "description": "Enter an item description here"
+    },
+    "armor": {
+      "sp": 8,
+      "location": "",
+      "ablation": 0,
+      "penalty": 0,
+      "description": "Enter an item description here"
+    }
+  }
+}
