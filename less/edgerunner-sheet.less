@@ -1,46 +1,80 @@
+@red : hsl(2, 71%, 47%);
+
+.window-resizable-handle {visibility: hidden}
+
 .red.edgerunner.sheet {
-  // max-width: 919px;
-  // max-height: 840px;
-  // min-height: 840px;
-  // min-width: 919px;
+  max-width: 1026px;
+  max-height: 917px;
+  min-height: 917px;
+  min-width: 1026px;
   padding: 0;
   margin: 0;
+  font-size: 12px;
 
   input {
     border-radius: 0;
     border: none;
     background: white;
   }
-  input:hover {
-    background-color: hsl(0, 0%, 80%);
-  }
+  
   input:focus {
-    border: solid 2px black;
+    border: solid 2px lightcoral;
     box-shadow: none;
   }
+
   .window-content {
     background-image: none;
     background-color: white;
   }
 
+  nav {
+    border-bottom: solid @red 5px;
+    border-top: solid @red 5px;
+    
+  };
+  .sheet-tabs {
+    line-height: 2em;
+    a {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      color: @red;
+    };
+    a:hover {
+      text-shadow: none;
+    };
+    a:focus {
+      text-shadow: none;
+    };
+    a:active {
+      text-shadow: none;
+    };
+    a.active {
+      text-shadow: none;
+      font-weight: bold;
+    }
+  };
+
   .sheet-content {
     height: 95%;
     display: grid;
-    grid-template-columns: 220px 50px repeat(3, 210px);
-    grid-template-rows: 500px 100px 200px;
+    grid-template-columns: 220px 60px repeat(3, 230px);
+    grid-column-gap: 10px;
+    grid-template-rows: 550px 60px 200px;
+    grid-row-gap: 10px;
     grid-template-areas: 
       "character stat skill skill skill"
       "humanity stat skill skill skill"
       "health health combat combat combat";
-    .info-block {
+    .info-block {    
       grid-area: character;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-between;
       height: 100%;
-      background-color: red;
+      background-color: @red;
       padding: 10px 5px 5px 5px;
       .image-block {
+        clip-path: polygon(10% 0, 0 10%, 0 100%, 100% 100%, 100% 0);
         background: white;
         height: 210px;
         img {
@@ -55,17 +89,22 @@
         justify-content: space-between;
         background: white;
         padding: 0;
+        padding-right: 10px;
         label {
           min-width: 70px;
           span {
             text-transform: capitalize;
             font-weight: bold;
+            padding-left: 5px;
           };
         };
         input {
-          border: none;
+          text-align: end;
+          font-size: 2em;
+          padding-bottom: 3px;
           #rank {
-          width: 30px; text-align: center;
+          width: 30px; 
+          text-align: end;
           };
         };
         .role-unit {
@@ -73,56 +112,83 @@
           flex-direction: row;
         };
       };
-      textarea {
-        border: none;
-        width: 211px;
-        height: 117px;
-        max-width: 211px;
-        max-height: 117px;
-        min-width: 211px;
-        min-height: 117px;
-      };
-    };
+      .notes-box {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        p {
+          padding-left: 5px;
+          text-align: start;
+          font-weight: bold;
+          margin: 0;
+        };
+        textarea {
+          border: none;
+          width: 213px;
+          height: 153px;
+          // max-width: 211px;
+          // max-height: 117px;
+          // min-width: 211px;
+          // min-height: 117px;
+        };
+        textarea:focus {
+          border: none;
+          box-shadow: none;
+          outline: 0;
+        }
+      };  
+    };  
     .stat-block {
       grid-area: stat;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background-color: red;
+      align-items: center;
+      background-color: @red;
       padding-top: 10px;
+      padding-bottom: 5px;
       .stat-unit {
+        clip-path: polygon(30% 0, 0 30%, 0 100%, 100% 100%, 100% 0);
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: white;
         height: 50px;
         width: 50px;
+        justify-content: space-between;
         p {
           text-align: end;
           margin: 0;
           font-weight: bold;
+          width: 100%;
+          padding-right: 2px;
         };
         input { 
           text-align: center; 
-          font-size: 2em;
+          font-size: 2.5em;
           border: none;
           border-radius: 0;
-          width: 100%;
+          width: 90%;
         };
         .resource-block {
+          width: 99%;
           display: flex;
           justify-content: space-between;
           input {
             width: 15px;
-            font-size: 1.8em
+            font-size: 2em
           }
         };
+        padding-bottom: 5px;
       };
+      .stat-unit.clip {
+        clip-path: polygon(30% 0, 0 30%, 0 100%, 41% 100%, 41% 40%, 59% 40%, 59% 100%, 100% 100%, 100% 0);
+      }
     };
     .humanity-block {
       grid-area: humanity;
       display: flex;
-      background-color: red;
+      background-color: @red;
       padding: 10px 5px 5px 5px;;
 
       .resource-unit {
@@ -136,7 +202,7 @@
     };
     .health-block {
       grid-area: health;
-      background-color: red;
+      background-color: @red;
       padding: 10px 5px 5px 5px;
       .resource-unit {
         display: flex;
@@ -150,28 +216,30 @@
     .skill-block {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       grid-area: skill;
-      font-size: 10px;
+      font-size: 1em;
       flex-wrap: wrap;
-      height: 600px;
-      background-color: red;
-      padding: 10px 5px 5px 5px;
-
+      height: 620px;
+      background-color: @red;
+      padding: 10px 5px 0 5px;
       .skill-unit {
         display: flex;
-        width: 200px;
+        width: 230px;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 5px;
         background: white;
+        border-bottom: solid @red 5px;
+        border-right: solid @red 2px;
         .name {
-          width: 80%
+          width: 80%;
+          padding-left: 3px;
         };
         .level {
           width: 10%;
           input {
             text-align: center;
-            height: 20px;
+            height: 1.5em;
           }
         };
         .stat {
@@ -181,7 +249,7 @@
         .base {
           width: 10%;
           text-align: center;
-          font-size: 1.3em;
+          font-size: 1.4em;
           font-weight: bold;
         }
       };

@@ -10,43 +10,76 @@
 .red.item.sheet .sheet-content .editor {
   height: 100%;
 }
+.window-resizable-handle {
+  visibility: hidden;
+}
 .red.edgerunner.sheet {
+  max-width: 1026px;
+  max-height: 917px;
+  min-height: 917px;
+  min-width: 1026px;
   padding: 0;
   margin: 0;
+  font-size: 12px;
 }
 .red.edgerunner.sheet input {
   border-radius: 0;
   border: none;
   background: white;
 }
-.red.edgerunner.sheet input:hover {
-  background-color: hsl(0, 0%, 80%);
-}
 .red.edgerunner.sheet input:focus {
-  border: solid 2px black;
+  border: solid 2px lightcoral;
   box-shadow: none;
 }
 .red.edgerunner.sheet .window-content {
   background-image: none;
   background-color: white;
 }
+.red.edgerunner.sheet nav {
+  border-bottom: solid hsl(2, 71%, 47%) 5px;
+  border-top: solid hsl(2, 71%, 47%) 5px;
+}
+.red.edgerunner.sheet .sheet-tabs {
+  line-height: 2em;
+}
+.red.edgerunner.sheet .sheet-tabs a {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: hsl(2, 71%, 47%);
+}
+.red.edgerunner.sheet .sheet-tabs a:hover {
+  text-shadow: none;
+}
+.red.edgerunner.sheet .sheet-tabs a:focus {
+  text-shadow: none;
+}
+.red.edgerunner.sheet .sheet-tabs a:active {
+  text-shadow: none;
+}
+.red.edgerunner.sheet .sheet-tabs a.active {
+  text-shadow: none;
+  font-weight: bold;
+}
 .red.edgerunner.sheet .sheet-content {
   height: 95%;
   display: grid;
-  grid-template-columns: 220px 50px repeat(3, 210px);
-  grid-template-rows: 500px 100px 200px;
+  grid-template-columns: 220px 60px repeat(3, 230px);
+  grid-column-gap: 10px;
+  grid-template-rows: 550px 60px 200px;
+  grid-row-gap: 10px;
   grid-template-areas: "character stat skill skill skill" "humanity stat skill skill skill" "health health combat combat combat";
 }
 .red.edgerunner.sheet .sheet-content .info-block {
   grid-area: character;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   height: 100%;
-  background-color: red;
+  background-color: hsl(2, 71%, 47%);
   padding: 10px 5px 5px 5px;
 }
 .red.edgerunner.sheet .sheet-content .info-block .image-block {
+  clip-path: polygon(10% 0, 0 10%, 0 100%, 100% 100%, 100% 0);
   background: white;
   height: 210px;
 }
@@ -61,6 +94,7 @@
   justify-content: space-between;
   background: white;
   padding: 0;
+  padding-right: 10px;
 }
 .red.edgerunner.sheet .sheet-content .info-block .info-unit label {
   min-width: 70px;
@@ -68,67 +102,93 @@
 .red.edgerunner.sheet .sheet-content .info-block .info-unit label span {
   text-transform: capitalize;
   font-weight: bold;
+  padding-left: 5px;
 }
 .red.edgerunner.sheet .sheet-content .info-block .info-unit input {
-  border: none;
+  text-align: end;
+  font-size: 2em;
+  padding-bottom: 3px;
 }
 .red.edgerunner.sheet .sheet-content .info-block .info-unit input #rank {
   width: 30px;
-  text-align: center;
+  text-align: end;
 }
 .red.edgerunner.sheet .sheet-content .info-block .info-unit .role-unit {
   display: flex;
   flex-direction: row;
 }
-.red.edgerunner.sheet .sheet-content .info-block textarea {
+.red.edgerunner.sheet .sheet-content .info-block .notes-box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.red.edgerunner.sheet .sheet-content .info-block .notes-box p {
+  padding-left: 5px;
+  text-align: start;
+  font-weight: bold;
+  margin: 0;
+}
+.red.edgerunner.sheet .sheet-content .info-block .notes-box textarea {
   border: none;
-  width: 211px;
-  height: 117px;
-  max-width: 211px;
-  max-height: 117px;
-  min-width: 211px;
-  min-height: 117px;
+  width: 213px;
+  height: 153px;
+}
+.red.edgerunner.sheet .sheet-content .info-block .notes-box textarea:focus {
+  border: none;
+  box-shadow: none;
+  outline: 0;
 }
 .red.edgerunner.sheet .sheet-content .stat-block {
   grid-area: stat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: red;
+  align-items: center;
+  background-color: hsl(2, 71%, 47%);
   padding-top: 10px;
+  padding-bottom: 5px;
 }
 .red.edgerunner.sheet .sheet-content .stat-block .stat-unit {
+  clip-path: polygon(30% 0, 0 30%, 0 100%, 100% 100%, 100% 0);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
   height: 50px;
   width: 50px;
+  justify-content: space-between;
+  padding-bottom: 5px;
 }
 .red.edgerunner.sheet .sheet-content .stat-block .stat-unit p {
   text-align: end;
   margin: 0;
   font-weight: bold;
+  width: 100%;
+  padding-right: 2px;
 }
 .red.edgerunner.sheet .sheet-content .stat-block .stat-unit input {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
   border: none;
   border-radius: 0;
-  width: 100%;
+  width: 90%;
 }
 .red.edgerunner.sheet .sheet-content .stat-block .stat-unit .resource-block {
+  width: 99%;
   display: flex;
   justify-content: space-between;
 }
 .red.edgerunner.sheet .sheet-content .stat-block .stat-unit .resource-block input {
   width: 15px;
-  font-size: 1.8em;
+  font-size: 2em;
+}
+.red.edgerunner.sheet .sheet-content .stat-block .stat-unit.clip {
+  clip-path: polygon(30% 0, 0 30%, 0 100%, 41% 100%, 41% 40%, 59% 40%, 59% 100%, 100% 100%, 100% 0);
 }
 .red.edgerunner.sheet .sheet-content .humanity-block {
   grid-area: humanity;
   display: flex;
-  background-color: red;
+  background-color: hsl(2, 71%, 47%);
   padding: 10px 5px 5px 5px;
 }
 .red.edgerunner.sheet .sheet-content .humanity-block .resource-unit {
@@ -142,7 +202,7 @@
 }
 .red.edgerunner.sheet .sheet-content .health-block {
   grid-area: health;
-  background-color: red;
+  background-color: hsl(2, 71%, 47%);
   padding: 10px 5px 5px 5px;
 }
 .red.edgerunner.sheet .sheet-content .health-block .resource-unit {
@@ -161,30 +221,33 @@
 .red.edgerunner.sheet .sheet-content .skill-block {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   grid-area: skill;
-  font-size: 10px;
+  font-size: 1em;
   flex-wrap: wrap;
-  height: 600px;
-  background-color: red;
-  padding: 10px 5px 5px 5px;
+  height: 620px;
+  background-color: hsl(2, 71%, 47%);
+  padding: 10px 5px 0 5px;
 }
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit {
   display: flex;
-  width: 200px;
+  width: 230px;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 5px;
   background: white;
+  border-bottom: solid hsl(2, 71%, 47%) 5px;
+  border-right: solid hsl(2, 71%, 47%) 2px;
 }
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .name {
   width: 80%;
+  padding-left: 3px;
 }
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .level {
   width: 10%;
 }
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .level input {
   text-align: center;
-  height: 20px;
+  height: 1.5em;
 }
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .stat {
   width: 10%;
@@ -193,7 +256,7 @@
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .base {
   width: 10%;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: bold;
 }
 .red.edgerunner.sheet .sheet-content .num-input {
