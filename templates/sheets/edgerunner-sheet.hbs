@@ -1,5 +1,6 @@
 <form class="{{cssClass}}" autocomplete="off">
 
+  {{!-- TODO: Fix this --}}
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="stats">Stats</a>
@@ -11,19 +12,21 @@
   <div class="sheet-content">
 
     {{!-- Character stats tab --}}
-    <div class="tab stats" data-group="primary" data-tab="stats">
+    {{!-- <div class="tab stats" data-group="primary" data-tab="stats"> --}}
       
       {{! Character information block }}
       <div class="info-block">
-        <img
+        <div class="image-block">
+          <img
           src="{{actor.img}}"
           data-edit="img"
           title="{{actor.name}}"
           height="200"
-        />
+          />
+        </div>
         <div class="info-unit">
           <label>
-            Handle:
+            <span>HANDLE</span>
           </label>
           <input
             name="name"
@@ -34,39 +37,39 @@
         </div>
         <div class="info-unit">
           <label>
-            Role:
+            <span>ROLE</span>
           </label>
           <input name="data.role" type="text" value="{{data.role}}" />
         </div>
         <div class="info-unit">
           <label>
-            Ability:
+            <span>ABILITY</span>
           </label>
-          <input
-            name="data.roleAbility"
-            type="text"
-            value="{{data.roleAbility}}"
-          />
-          <input
-            id="rank"
-            class="num-input"
-            name="data.roleAbilityRank"
-            type="number"
-            value="{{data.roleAbilityRank}}"
-            data-dtype="Number"
-          />
+          <div class="role-unit">
+            <input
+              name="data.roleAbility"
+              type="text"
+              value="{{data.roleAbility}}"
+            />
+            <input
+              id="rank"
+              class="num-input"
+              name="data.roleAbilityRank"
+              type="number"
+              value="{{data.roleAbilityRank}}"
+              data-dtype="Number"
+            />
+          </div>
         </div>
         <div class="info-unit">
-          <textarea name="data.notes" value="{{data.notes}}"></textarea>
+          <textarea name="data.notes" value="{{data.notes}}" data-edit="{{data.notes}}"></textarea>
         </div>
       </div>
 
       {{! Stat block }}
       <div class="stat-block">
         <div class="stat-unit">
-          <label>
-            INT
-          </label>
+          <p>INT</p>
           <input
             class="num-input"
             name="data.stats.int"
@@ -76,9 +79,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            REF
-          </label>
+          <p>REF</p>
           <input
             class="num-input"
             name="data.stats.ref"
@@ -88,9 +89,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            DEX
-          </label>
+          <p>DEX</p>
           <input
             class="num-input"
             name="data.stats.dex"
@@ -100,9 +99,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            TECH
-          </label>
+          <p>TECH</p>
           <input
             class="num-input"
             name="data.stats.tech"
@@ -112,9 +109,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            COOL
-          </label>
+          <p>COOL</p>
           <input
             class="num-input"
             name="data.stats.cool"
@@ -124,9 +119,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            WILL
-          </label>
+          <p>WILL</p>
           <input
             class="num-input"
             name="data.stats.will"
@@ -136,9 +129,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            LUCK
-          </label>
+          <p>LUCK</p>
           <div class="resource-block">
             <input
               class="num-input"
@@ -147,9 +138,6 @@
               value="{{data.stats.luck}}"
               data-dtype="Number"
             />
-            <span>
-              ||
-            </span>
             <input
               class="num-input"
               name="data.stats.maxLuck"
@@ -160,9 +148,7 @@
           </div>
         </div>
         <div class="stat-unit">
-          <label>
-            MOVE
-          </label>
+          <p>MOVE</p>
           <input
             class="num-input"
             name="data.stats.move"
@@ -172,9 +158,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            BODY
-          </label>
+          <p>BODY</p>
           <input
             class="num-input"
             name="data.stats.body"
@@ -184,9 +168,7 @@
           />
         </div>
         <div class="stat-unit">
-          <label>
-            EMP
-          </label>
+          <p>EMP</p>
           <div class="resource-block">
             <input
               class="num-input"
@@ -195,9 +177,6 @@
               value="{{data.stats.emp}}"
               data-dtype="Number"
             />
-            <span>
-              ||
-            </span>
             <input
               class="num-input"
               name="data.stats.maxEmp"
@@ -213,7 +192,7 @@
       <div class="humanity-block">
         <div class="resource-unit">
           <label>
-            Humanity:
+            <span>HUMANITY</span>
           </label>
           <input
             class="num-input"
@@ -239,7 +218,7 @@
       <div class="health-block">
         <div class="resource-unit">
           <label>
-            Hit Points:
+            <span>HITPOINTS</span>
           </label>
           <input
             class="num-input"
@@ -296,6 +275,6 @@
       
       {{! Weapons and armor block }}
 
-    </div>
+    {{!-- </div> --}}
   </div>
 </form>

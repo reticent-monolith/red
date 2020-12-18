@@ -3,11 +3,31 @@
   // max-height: 840px;
   // min-height: 840px;
   // min-width: 919px;
+  padding: 0;
+  margin: 0;
+
+  input {
+    border-radius: 0;
+    border: none;
+    background: white;
+  }
+  input:hover {
+    background-color: hsl(0, 0%, 80%);
+  }
+  input:focus {
+    border: solid 2px black;
+    box-shadow: none;
+  }
+  .window-content {
+    background-image: none;
+    background-color: white;
+  }
+
   .sheet-content {
     height: 95%;
     display: grid;
-    grid-template-columns: 25% 7% repeat(3, 1fr);
-    grid-template-rows: 70% 10% 20%;
+    grid-template-columns: 220px 50px repeat(3, 210px);
+    grid-template-rows: 500px 100px 200px;
     grid-template-areas: 
       "character stat skill skill skill"
       "humanity stat skill skill skill"
@@ -16,62 +36,113 @@
       grid-area: character;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      width: 20%;
-      height: 70%;
-      max-width: 300px;
-      min-width: 200px;
+      justify-content: space-evenly;
+      height: 100%;
+      background-color: red;
+      padding: 10px 5px 5px 5px;
+      .image-block {
+        background: white;
+        height: 210px;
+        img {
+          height: 210px;
+          width: 210px;
+          border: none
+        };
+      }
       .info-unit {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        label {min-width: 70px};
-        input#rank {width: 30px; text-align: center;};
-        textarea {height: 250px}
-      }
+        background: white;
+        padding: 0;
+        label {
+          min-width: 70px;
+          span {
+            text-transform: capitalize;
+            font-weight: bold;
+          };
+        };
+        input {
+          border: none;
+          #rank {
+          width: 30px; text-align: center;
+          };
+        };
+        .role-unit {
+          display: flex;
+          flex-direction: row;
+        };
+      };
+      textarea {
+        border: none;
+        width: 211px;
+        height: 117px;
+        max-width: 211px;
+        max-height: 117px;
+        min-width: 211px;
+        min-height: 117px;
+      };
     };
     .stat-block {
       grid-area: stat;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 40px;
-      height: 100%;
-      // max-width: 50px;
-      // min-width: 50px;
+      background-color: red;
+      padding-top: 10px;
       .stat-unit {
         display: flex;
         flex-direction: column;
-        input { text-align: center; font-size: 20px;};
+        align-items: center;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        p {
+          text-align: end;
+          margin: 0;
+          font-weight: bold;
+        };
+        input { 
+          text-align: center; 
+          font-size: 2em;
+          border: none;
+          border-radius: 0;
+          width: 100%;
+        };
         .resource-block {
           display: flex;
           justify-content: space-between;
-          font-size: 15px;
           input {
-            width: 10px;
+            width: 15px;
+            font-size: 1.8em
           }
-        }
-      }
+        };
+      };
     };
     .humanity-block {
       grid-area: humanity;
       display: flex;
+      background-color: red;
+      padding: 10px 5px 5px 5px;;
+
       .resource-unit {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        height: 10%;
-        label {min-width: 70px};
-        input {width: 30px; text-align: center;};
-      }
+        justify-content: space-evenly;
+        background: white;
+        // label {min-width: 70px};
+        input {text-align: center;};
+      };
     };
     .health-block {
       grid-area: health;
+      background-color: red;
+      padding: 10px 5px 5px 5px;
       .resource-unit {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 20%;
+        background: white;
         label {min-width: 70px};
         input {width: 30px; text-align: center;};
       }
@@ -83,12 +154,16 @@
       font-size: 10px;
       flex-wrap: wrap;
       height: 600px;
+      background-color: red;
+      padding: 10px 5px 5px 5px;
+
       .skill-unit {
         display: flex;
         width: 200px;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 5px;
+        background: white;
         .name {
           width: 80%
         };
@@ -112,7 +187,6 @@
       };
     };
     .num-input {width: 30px; text-align: center};
-  }
-}
-
+  };
+};
 
