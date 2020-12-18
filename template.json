@@ -8,10 +8,12 @@
         "move": 6,
         "dex": 6,
         "int": 6,
-        "emp": {"value":6, "max": 6},
+        "emp": 6,
+        "maxEmp": 6,
         "cool": 6,
         "tech": 6,
-        "luck": {"value":6, "max": 6},
+        "luck": 6,
+        "maxLuck": 6,
         "will": 6
       },
       "role": "",
@@ -158,7 +160,7 @@
           "cost": 1
         },
         "cryptography": {
-          "name": "Cryptograohy",
+          "name": "Cryptography",
           "lvl": 0,
           "stat": "int",
           "cost": 1

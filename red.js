@@ -1,13 +1,6 @@
 import { red } from "./module/config.js";
 import redItemSheet from "./module/sheets/redItemSheet.js";
-import redActorSheet from "./module/sheets/redActorSheet.js";
-
-async function preloadHandlebarsTemplates() {
-  const paths = [
-    "systems/red/templates/partials/skill.hbs"
-  ];
-  return loadTemplates(paths);
-};
+import redEdgerunnerSheet from "./module/sheets/redEdgerunnerSheet.js";
 
 Hooks.once("init", function() {
   console.log("red | Initialising Cyberpunk_RED System");
@@ -18,14 +11,15 @@ Hooks.once("init", function() {
   Items.registerSheet("red", redItemSheet, { makeDefault: true });
   
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("red", redActorSheet, { makeDefault: true });
+  Actors.registerSheet("red", redEdgerunnerSheet, { makeDefault: true });
 
   Handlebars.registerHelper("add", function(a, b) {
     return a + b;
   });
   
-  Handlebars.registerHelper("insert", function(string, thing) {
-    return ``
+  Handlebars.registerHelper("join", function(pre, cunt, post) {
+    const newString = [pre, cunt, post].join('')
+    return newString
   });
   
   Handlebars.registerHelper("getProp", function(thing, props) {
@@ -37,5 +31,4 @@ Hooks.once("init", function() {
     return string.toUpperCase()
   });
 
-  preloadHandlebarsTemplates();
 });

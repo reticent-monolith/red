@@ -1,289 +1,301 @@
 <form class="{{cssClass}}" autocomplete="off">
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="stats">Stats</a>
+        <a class="item" data-tab="hardware">Hardware</a>
+        <a class="item" data-tab="biography">Biography</a>
+  </nav>
+  
+  {{!-- Main body --}}
   <div class="sheet-content">
-    {{! Character information block }}
-    <div class="info-block">
-      <img
-        src="{{actor.img}}"
-        data-edit="img"
-        title="{{actor.name}}"
-        height="200"
-      />
-      <div class="info-unit">
-        <label>
-          Handle:
-        </label>
-        <input
-          name="name"
-          type="text"
-          value="{{actor.name}}"
-          placeholder="Name"
+
+    {{!-- Character stats tab --}}
+    <div class="tab stats" data-group="primary" data-tab="stats">
+      
+      {{! Character information block }}
+      <div class="info-block">
+        <img
+          src="{{actor.img}}"
+          data-edit="img"
+          title="{{actor.name}}"
+          height="200"
         />
+        <div class="info-unit">
+          <label>
+            Handle:
+          </label>
+          <input
+            name="name"
+            type="text"
+            value="{{actor.name}}"
+            placeholder="Name"
+          />
+        </div>
+        <div class="info-unit">
+          <label>
+            Role:
+          </label>
+          <input name="data.role" type="text" value="{{data.role}}" />
+        </div>
+        <div class="info-unit">
+          <label>
+            Ability:
+          </label>
+          <input
+            name="data.roleAbility"
+            type="text"
+            value="{{data.roleAbility}}"
+          />
+          <input
+            id="rank"
+            class="num-input"
+            name="data.roleAbilityRank"
+            type="number"
+            value="{{data.roleAbilityRank}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="info-unit">
+          <textarea name="data.notes" value="{{data.notes}}"></textarea>
+        </div>
       </div>
-      <div class="info-unit">
-        <label>
-          Role:
-        </label>
-        <input name="data.role" type="text" value="{{data.role}}" />
-      </div>
-      <div class="info-unit">
-        <label>
-          Ability:
-        </label>
-        <input
-          name="data.roleAbility"
-          type="text"
-          value="{{data.roleAbility}}"
-        />
-        <input
-          id="rank"
-          class="num-input"
-          name="data.roleAbilityRank"
-          type="number"
-          value="{{data.roleAbilityRank}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="info-unit">
-        <textarea name="data.notes" value="{{data.notes}}"></textarea>
-      </div>
-    </div>
-    {{! Stat block }}
-    <div class="stat-block">
-      <div class="stat-unit">
-        <label>
-          INT
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.int"
-          type="number"
-          value="{{data.stats.int}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          REF
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.ref"
-          type="number"
-          value="{{data.stats.ref}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          DEX
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.dex"
-          type="number"
-          value="{{data.stats.dex}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          TECH
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.tech"
-          type="number"
-          value="{{data.stats.tech}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          COOL
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.cool"
-          type="number"
-          value="{{data.stats.cool}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          WILL
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.will"
-          type="number"
-          value="{{data.stats.will}}"
-          data-dtype="number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          LUCK
-        </label>
-        <div class="resource-block">
+
+      {{! Stat block }}
+      <div class="stat-block">
+        <div class="stat-unit">
+          <label>
+            INT
+          </label>
           <input
             class="num-input"
-            name="data.stats.luck.value"
+            name="data.stats.int"
             type="number"
-            value="{{data.stats.luck.value}}"
+            value="{{data.stats.int}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            REF
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.ref"
+            type="number"
+            value="{{data.stats.ref}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            DEX
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.dex"
+            type="number"
+            value="{{data.stats.dex}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            TECH
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.tech"
+            type="number"
+            value="{{data.stats.tech}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            COOL
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.cool"
+            type="number"
+            value="{{data.stats.cool}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            WILL
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.will"
+            type="number"
+            value="{{data.stats.will}}"
+            data-dtype="number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            LUCK
+          </label>
+          <div class="resource-block">
+            <input
+              class="num-input"
+              name="data.stats.luck"
+              type="number"
+              value="{{data.stats.luck}}"
+              data-dtype="Number"
+            />
+            <span>
+              ||
+            </span>
+            <input
+              class="num-input"
+              name="data.stats.maxLuck"
+              type="number"
+              value="{{data.stats.maxLuck}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+        <div class="stat-unit">
+          <label>
+            MOVE
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.move"
+            type="number"
+            value="{{data.stats.move}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            BODY
+          </label>
+          <input
+            class="num-input"
+            name="data.stats.body"
+            type="number"
+            value="{{data.stats.body}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="stat-unit">
+          <label>
+            EMP
+          </label>
+          <div class="resource-block">
+            <input
+              class="num-input"
+              name="data.stats.emp"
+              type="number"
+              value="{{data.stats.emp}}"
+              data-dtype="Number"
+            />
+            <span>
+              ||
+            </span>
+            <input
+              class="num-input"
+              name="data.stats.maxEmp"
+              type="number"
+              value="{{data.stats.maxEmp}}"
+              data-dtype="Number"
+            />
+          </div>
+        </div>
+      </div>
+
+      {{! Humanity block }}
+      <div class="humanity-block">
+        <div class="resource-unit">
+          <label>
+            Humanity:
+          </label>
+          <input
+            class="num-input"
+            name="data.humanity.value"
+            type="number"
+            value="{{data.humanity.value}}"
             data-dtype="Number"
           />
           <span>
-            ||
+            out of
           </span>
           <input
             class="num-input"
-            name="data.stats.luck.max"
+            name="data.humanity.max"
             type="number"
-            value="{{data.stats.luck.max}}"
+            value="{{data.humanity.max}}"
             data-dtype="Number"
           />
         </div>
       </div>
-      <div class="stat-unit">
-        <label>
-          MOVE
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.move"
-          type="number"
-          value="{{data.stats.move}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          BODY
-        </label>
-        <input
-          class="num-input"
-          name="data.stats.body"
-          type="number"
-          value="{{data.stats.body}}"
-          data-dtype="Number"
-        />
-      </div>
-      <div class="stat-unit">
-        <label>
-          EMP
-        </label>
-        <div class="resource-block">
+
+      {{! Health block }}
+      <div class="health-block">
+        <div class="resource-unit">
+          <label>
+            Hit Points:
+          </label>
           <input
             class="num-input"
-            name="data.stats.emp.value"
+            name="data.hitpoints.value"
             type="number"
-            value="{{data.stats.emp.value}}"
+            value="{{data.hitpoints.value}}"
             data-dtype="Number"
           />
           <span>
-            ||
+            out of
           </span>
           <input
             class="num-input"
-            name="data.stats.emp.max"
+            name="data.hitpoints.max"
             type="number"
-            value="{{data.stats.emp.max}}"
+            value="{{data.hitpoints.max}}"
             data-dtype="Number"
           />
         </div>
       </div>
-    </div>
-    {{! Humanity block }}
-    <div class="humanity-block">
-      <div class="resource-unit">
-        <label>
-          Humanity:
-        </label>
-        <input
-          class="num-input"
-          name="data.humanity.value"
-          type="number"
-          value="{{data.humanity.value}}"
-          data-dtype="Number"
-        />
-        <span>
-          out of
-        </span>
-        <input
-          class="num-input"
-          name="data.humanity.max"
-          type="number"
-          value="{{data.humanity.max}}"
-          data-dtype="Number"
-        />
-      </div>
-    </div>
-    {{! Health block }}
-    <div class="health-block">
-      <div class="resource-unit">
-        <label>
-          Hit Points:
-        </label>
-        <input
-          class="num-input"
-          name="data.hitpoints.value"
-          type="number"
-          value="{{data.hitpoints.value}}"
-          data-dtype="Number"
-        />
-        <span>
-          out of
-        </span>
-        <input
-          class="num-input"
-          name="data.hitpoints.max"
-          type="number"
-          value="{{data.hitpoints.max}}"
-          data-dtype="Number"
-        />
-      </div>
-    </div>
-    {{! Skill block 1 }}
-    <div class="skill-block">
-      <div id="awareness-skills">
-        <table>
-          {{!-- skill partial --}}
-          {{#each data.skills as |sk obj|}}
-            {{!-- Painful helpers to get numbers...  --}}
-            {{!-- {{log (getProp (getProp ../data.skills obj) 'lvl')}} --}}
-            {{!-- {{log (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }} --}}
-
-            <tr>
-              <td>
-                {{sk.name}} <strong>({{loud sk.stat}})</strong>
-              </td>
-              <td>
-                <input
-                  class="num-input"
-                  name="data.skills.{{obj}}.lvl"
-                  type="number"
-                  value="{{sk.lvl}}"
-                  data-dtype="Number"
-                />
-              </td>
-              <td>
-                <span>{{getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')}}</span>
-              </td>
-              <td>
-                <span>
-                  {{add (getProp (getProp ../data.skills obj) 'lvl') (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }}
-                </span>
-              </td>
-            </tr>
+      
+      {{! Skill block }}
+      <div class="skill-block">
+        
+        {{!-- skill partial --}}
+        {{#each data.skills as |sk obj|}}
+          {{!-- Painful helpers to get numbers...  --}}
+          {{!-- {{log (getProp (getProp ../data.skills obj) 'lvl')}} --}}
+          {{!-- {{log (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }} --}}
+          <div class="skill-unit">
+            <span class="name">
+              {{sk.name}} <strong>({{loud sk.stat}})</strong>
+            </span>
+            <span class="level">
+              <input
+                name={{join 'data.skills.' obj '.lvl'}}
+                type="number"
+                value="{{sk.lvl}}"
+                data-dtype="Number"
+              />
+            </span>
+            {{!-- <span class="stat">
+              {{getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')}}
+            </span> --}}
+            <span class="base">
+              {{add (getProp (getProp ../data.skills obj) 'lvl') (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }}
+            </span>
+          </div>
+        {{/each}}
+        {{test}}
 
 
-          {{/each}}
-        </table>
       </div>
+      
+      {{! Weapons and armor block }}
+
     </div>
-    {{! Skill block 2 }}
-    {{! Skill block 3 }}
-    {{! Weapons and armor block }}
   </div>
 </form>

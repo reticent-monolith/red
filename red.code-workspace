@@ -2,6 +2,12 @@
     "folders": [
         {
             "path": "."
+        },
+        {
+            "path": "..\\worldbuilding"
+        },
+        {
+            "path": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\FoundryVTT\\resources\\app"
         }
     ]
 }
