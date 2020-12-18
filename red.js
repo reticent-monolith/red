@@ -31,4 +31,13 @@ Hooks.once("init", function() {
     return string.toUpperCase()
   });
 
+  Handlebars.registerHelper("isHeader", function(thing) {
+    console.log(thing)
+    const array = [
+      "awareness", "body", "control", "edu", "fighting", "performance", "ranged", "social", "technique"
+    ];
+    const result = array.some(e => e == thing);
+    return result;
+  });
+
 });

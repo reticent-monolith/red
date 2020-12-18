@@ -246,6 +246,14 @@
         
         {{!-- skill partial --}}
         {{#each data.skills as |sk obj|}}
+        {{#if (isHeader obj)}}
+        <div class="skill-unit header">
+          <span>
+            {{sk}}
+          </span>
+          <span>BASE</span>
+        </div>
+        {{else}}
           {{!-- Painful helpers to get numbers...  --}}
           {{!-- {{log (getProp (getProp ../data.skills obj) 'lvl')}} --}}
           {{!-- {{log (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }} --}}
@@ -253,6 +261,10 @@
             <span class="name">
               {{sk.name}} <strong>({{loud sk.stat}})</strong>
             </span>
+            {{#if sk.isMulti}}
+              {{!-- Need to create a popup to show multiple skills --}}
+              <a class="multiskill-button">Show</a>
+            {{else}}
             <span class="level">
               <input
                 name={{join 'data.skills.' obj '.lvl'}}
@@ -267,11 +279,14 @@
             <span class="base">
               {{add (getProp (getProp ../data.skills obj) 'lvl') (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }}
             </span>
+            {{/if}}
           </div>
+        {{/if}}  
         {{/each}}
-        {{test}}
-
-
+        {{!-- Calculate total LVL input points across all skills and subtract from 86 --}}
+        <div class="skillpoints-box">
+          <h3>Remaining</h3>
+        </div>
       </div>
       
       {{! Weapons and armor block }}

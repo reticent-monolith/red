@@ -33,6 +33,7 @@
       "criticalInjuries": [],
       "addictions": [],
       "skills": {
+        "awareness": "Awareness Skills",
         "concentration": {
           "name": "Concentration",
           "lvl": 2,
@@ -63,6 +64,7 @@
           "stat": "int",
           "cost": 1
         },
+        "body": "Body Skills",
         "athletics": {
           "name": "Athletics",
           "lvl": 2,
@@ -99,6 +101,7 @@
           "stat": "dex",
           "cost": 1
         },
+        "control": "Control Skills",
         "driveLandVehicle": {
           "name": "Drive Land Vehicle",
           "lvl": 0,
@@ -123,6 +126,7 @@
           "stat": "ref",
           "cost": 1
         },
+        "edu": "Education Skills",
         "accounting": {
           "name": "Accounting",
           "lvl": 0,
@@ -183,11 +187,36 @@
           "stat": "int",
           "cost": 1
         },
+        "language": {
+          "isMulti": true,
+          "name": "Language",
+          "cost": 1,
+          "stat": "int",
+          "known": {
+            "streetslang": 2
+          }
+        },
         "librarySearch": {
           "name": "Library Search",
           "lvl": 0,
           "stat": "int",
           "cost": 1
+        },
+        "localExpert": {
+          "isMulti": true,
+          "name": "Local Expert",
+          "cost": 1,
+          "stat": "int",
+          "known": {
+            "yourHome": 2
+          }
+        },
+        "science": {
+          "isMulti": true,
+          "name": "Science",
+          "cost": 1,
+          "stat": "int",
+          "known": {}
         },
         "tactics": {
           "name": "Tactics",
@@ -201,6 +230,7 @@
           "stat": "int",
           "cost": 1
         },
+        "fighting": "Fighting Skills",
         "brawling": {
           "name": "Brawling",
           "lvl": 2,
@@ -226,12 +256,21 @@
           "stat": "dex",
           "cost": 1
         },
+        "performance": "Performance Skills",
         "acting": {
           "name": "Acting",
           "lvl": 0,
           "stat": "cool",
           "cost": 1
         },
+        "playInstrument": {
+          "isMulti": true,
+          "name": "Play Instrument",
+          "cost": 1,
+          "stat": "tech",
+          "known": {}
+        },
+        "ranged": "Ranged Weapon Skills",
         "archery": {
           "name": "Archery",
           "lvl": 0,
@@ -262,6 +301,7 @@
           "stat": "ref",
           "cost": 1
         },
+        "social": "Social Skills",
         "bribery": {
           "name": "Bribery",
           "lvl": 0,
@@ -316,6 +356,7 @@
           "stat": "cool",
           "cost": 1
         },
+        "technique": "Technique Skills",
         "airVehicleTech": {
           "name": "Air Vehicle Tech",
           "lvl": 0,
@@ -405,36 +446,6 @@
           "lvl": 0,
           "stat": "tech",
           "cost": 1
-        }
-      },
-      "multiSkills": {
-        "language": {
-          "name": "Language",
-          "cost": 1,
-          "stat": "int",
-          "known": {
-            "streetslang": 2
-          }
-        },
-        "localExpert": {
-          "name": "Local Expert",
-          "cost": 1,
-          "stat": "int",
-          "known": {
-            "yourHome": 2
-          }
-        },
-        "science": {
-          "name": "Science",
-          "cost": 1,
-          "stat": "int",
-          "known": {}
-        },
-        "playInstrument": {
-          "name": "Play Instrument",
-          "cost": 1,
-          "stat": "tech",
-          "known": {}
         }
       },
       "inventory": {

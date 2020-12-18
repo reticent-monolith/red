@@ -13,6 +13,12 @@
 .window-resizable-handle {
   visibility: hidden;
 }
+.multiskill-button {
+  height: 1.4em;
+  width: 40px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 .red.edgerunner.sheet {
   max-width: 1026px;
   max-height: 917px;
@@ -256,8 +262,22 @@
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .base {
   width: 10%;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
+  margin-left: 10px;
+  padding-right: 15px;
+}
+.red.edgerunner.sheet .sheet-content .skill-block .skill-unit.header {
+  background: black;
+  color: white;
+  height: 23px;
+}
+.red.edgerunner.sheet .sheet-content .skill-block .skill-unit.header span {
+  padding: 0 5px;
+}
+.red.edgerunner.sheet .sheet-content .skill-block .skillpoints-box {
+  background: white;
+  width: 230px;
 }
 .red.edgerunner.sheet .sheet-content .num-input {
   width: 30px;
