@@ -21,23 +21,29 @@
       "roleAbilityRank": 4,
       "notes": "",
       "humanity": {
-        "min": 0,
         "max": 0,
         "value": 0
       },
       "hitpoints": {
-        "min": 0,
         "max": 0,
         "value": 0
       },
-      "criticalInjuries": [],
-      "addictions": [],
+      "seriouslyWounded": 5,
+      "deathSave": 5,
+      "criticalInjuries": {
+        "amount" : 0,
+        "list": []
+      },
+      "addictions": {
+        "amount": 0,
+        "list": []
+      },
       "skills": {
         "awareness": "Awareness Skills",
         "concentration": {
           "name": "Concentration",
           "lvl": 2,
-          "stat": "int",
+          "stat": "will",
           "cost": 1
         },
         "concealRevealObject": {

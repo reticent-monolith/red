@@ -26,7 +26,7 @@
         </div>
         <div class="info-unit">
           <label>
-            <span>HANDLE</span>
+            <span>Handle</span>
           </label>
           <input
             name="name"
@@ -37,13 +37,13 @@
         </div>
         <div class="info-unit">
           <label>
-            <span>ROLE</span>
+            <span>Role</span>
           </label>
           <input name="data.role" type="text" value="{{data.role}}" />
         </div>
         <div class="info-unit">
           <label>
-            <span>ABILITY</span>
+            <span>Ability</span>
           </label>
           <div class="role-unit">
             <input
@@ -62,8 +62,8 @@
           </div>
         </div>
         <div class="notes-box">
-          <p>NOTES</p>
-          <textarea name="data.notes" value="{{data.notes}}" data-edit="{{data.notes}}"></textarea>
+          <p>Notes</p>
+          <textarea name="data.notes">{{data.notes}}</textarea>
         </div>
       </div>
 
@@ -191,53 +191,77 @@
 
       {{! Humanity block }}
       <div class="humanity-block">
-        <div class="resource-unit">
-          <label>
-            <span>HUMANITY</span>
-          </label>
-          <input
-            class="num-input"
-            name="data.humanity.value"
-            type="number"
-            value="{{data.humanity.value}}"
-            data-dtype="Number"
-          />
-          <span>
-            out of
-          </span>
-          <input
-            class="num-input"
-            name="data.humanity.max"
-            type="number"
-            value="{{data.humanity.max}}"
-            data-dtype="Number"
-          />
+        <div class="humanity-unit">
+          <p>Humanity</p>
+          <div class='humanity-inputs'>
+            <input
+              class="num-input"
+              name="data.humanity.value"
+              type="number"
+              value="{{data.humanity.value}}"
+              data-dtype="Number"
+            />
+            <input
+              class="num-input"
+              name="data.humanity.max"
+              type="number"
+              value="{{data.humanity.max}}"
+              data-dtype="Number"
+            />
+          </div>
         </div>
       </div>
 
       {{! Health block }}
       <div class="health-block">
-        <div class="resource-unit">
-          <label>
-            <span>HITPOINTS</span>
-          </label>
-          <input
-            class="num-input"
-            name="data.hitpoints.value"
-            type="number"
-            value="{{data.hitpoints.value}}"
-            data-dtype="Number"
-          />
-          <span>
-            out of
-          </span>
-          <input
-            class="num-input"
-            name="data.hitpoints.max"
-            type="number"
-            value="{{data.hitpoints.max}}"
-            data-dtype="Number"
-          />
+        <div class="left">
+          <div class="hp-block">
+            <p>Hit Points</p>
+            <div class="inputs">
+              <input
+                class="num-input"
+                name="data.hitpoints.value"
+                type="number"
+                value="{{data.hitpoints.value}}"
+                data-dtype="Number"
+              />
+              <input
+                class="num-input"
+                name="data.hitpoints.max"
+                type="number"
+                value="{{data.hitpoints.max}}"
+                data-dtype="Number"
+              />
+            </div>
+          </div>
+          <div class="serious-block">
+            <div class="label">
+              <p>Seriously</p>
+              <p>Wounded</p>
+            </div>
+            <h3>{{halfRoundUp data.hitpoints.max}}</h3>
+            
+          </div>
+          <div class="save-block">
+            <p>Death Save</p>
+            <h3>0</h3>
+          </div>
+        </div>
+        <div class="right">
+          <div class="crits-block">
+            <p>Critical Injuries</p>
+            <div class="row">
+              <h3>{{data.criticalInjuries.amount}}</h3>
+              <a class="addictions-button">Show</a>
+            </div>
+          </div>
+          <div class="addictions-block">
+            <p>Addictions</p>
+            <div class="row">
+              <h3>{{data.addictions.amount}}</h3>
+              <a class="criticalInjuries-button">Show</a>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -290,6 +314,19 @@
       </div>
       
       {{! Weapons and armor block }}
+      <div class="combat-block">
+        <div class="left">
+          <div class="title">
+            <h1>Weapons and Armor</h1>
+          </div>
+          <div class="armor-block">
+
+          </div>
+        </div>
+        <div class="weapons-block">
+
+        </div>
+      </div>
 
     {{!-- </div> --}}
   </div>

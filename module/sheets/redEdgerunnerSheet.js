@@ -2,7 +2,7 @@ export default class redEdgerunnerSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       width: 1033,
-      height: 917,
+      height: 904,
       classes:["red", "sheet", "edgerunner"],
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-content", initial: "stats"}]
     });

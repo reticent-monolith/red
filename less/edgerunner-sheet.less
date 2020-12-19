@@ -1,4 +1,7 @@
 @red : hsl(2, 71%, 47%);
+@blue : hsl(223, 68%, 53%);
+@green : hsl(106, 73%, 41%);
+@color: @red;
 
 .window-resizable-handle {visibility: hidden}
 
@@ -11,8 +14,8 @@
 
 .red.edgerunner.sheet {
   max-width: 1026px;
-  max-height: 917px;
-  min-height: 917px;
+  max-height: 904px;
+  min-height: 904px;
   min-width: 1026px;
   padding: 0;
   margin: 0;
@@ -35,8 +38,8 @@
   }
 
   nav {
-    border-bottom: solid @red 5px;
-    border-top: solid @red 5px;
+    border-bottom: solid @color 5px;
+    border-top: solid @color 5px;
     
   };
   .sheet-tabs {
@@ -44,7 +47,7 @@
     a {
       font-size: 1.5em;
       text-transform: uppercase;
-      color: @red;
+      color: @color;
     };
     a:hover {
       text-shadow: none;
@@ -66,7 +69,7 @@
     display: grid;
     grid-template-columns: 220px 60px repeat(3, 230px);
     grid-column-gap: 10px;
-    grid-template-rows: 600px 60px 120px;
+    grid-template-rows: 585px 60px 150px;
     grid-row-gap: 10px;
     grid-template-areas: 
       "character stat skill skill skill"
@@ -78,7 +81,7 @@
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      background-color: @red;
+      background-color: @color;
       padding: 10px 5px 5px 5px;
       .image-block {
         clip-path: polygon(10% 0, 0 10%, 0 100%, 100% 100%, 100% 0);
@@ -132,7 +135,7 @@
         textarea {
           border: none;
           width: 213px;
-          height: 215px;
+          height: 205px;
           // max-width: 211px;
           // max-height: 117px;
           // min-width: 211px;
@@ -151,16 +154,16 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      background-color: @red;
+      background-color: @color;
       padding-top: 10px;
       padding-bottom: 5px;
       .stat-unit {
-        clip-path: polygon(30% 0, 0 30%, 0 100%, 100% 100%, 100% 0);
+        clip-path: polygon(30% 0, 0 25%, 0 100%, 100% 100%, 100% 0);
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: white;
-        height: 50px;
+        height: 57px;
         width: 50px;
         justify-content: space-between;
         p {
@@ -190,35 +193,147 @@
       };
       .stat-unit.clip {
         clip-path: polygon(30% 0, 0 30%, 0 100%, 41% 100%, 41% 40%, 59% 40%, 59% 100%, 100% 100%, 100% 0);
-      }
+      };
     };
     .humanity-block {
       grid-area: humanity;
-      display: flex;
-      background-color: @red;
-      padding: 10px 5px 5px 5px;;
-
-      .resource-unit {
+      background-color: @color;
+      padding: 10px 5px 5px 5px;
+      .humanity-unit {
+        clip-path: polygon(5% 0, 0 25%, 0 100%, 47.5% 100%, 47.5% 40%, 52.5% 40%, 52.5% 100%, 100% 100%, 100% 0);
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        flex-direction: column;
+        justify-content: space-between;
         background: white;
-        // label {min-width: 70px};
-        input {text-align: center;};
+        height: 45px;
+        p {
+          text-align: end; 
+          font-weight: bold;
+          padding-right: 5px;
+          margin: 0;
+        };
+        .humanity-inputs {
+          display: flex;
+          justify-content: space-around;
+          input {width: 50px; text-align: center; font-size: 2.5em; margin-bottom: 5px};
+        };
       };
     };
     .health-block {
+      height: 100%;
+      width: 100%;
       grid-area: health;
-      background-color: @red;
+      background-color: @color;
+      display: flex;
+      flex-direction: row;
       padding: 10px 5px 5px 5px;
-      .resource-unit {
+      p {margin: 0; font-weight: bold;};
+      .left {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        background: white;
-        label {min-width: 70px};
-        input {width: 30px; text-align: center;};
-      }
+        padding-right: 2.5px;
+        width: 50%;
+        .hp-block {
+          clip-path: polygon(7% 0, 0 25%, 0 100%, 47.5% 100%, 47.5% 40%, 52.5% 40%, 52.5% 100%, 100% 100%, 100% 0);
+          background: white;
+          display: flex;
+          flex-direction: column;
+          p {
+            text-align: end;
+            margin-right: 5px;
+          }
+          .inputs {
+            display: flex;
+            justify-content: space-around;
+            input {
+              font-size: 2em;
+              padding-bottom: 3px;
+              width: 50px;
+            };
+          };
+        };
+        .serious-block {
+          background: white;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .label {
+            padding-left: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+          };
+          h3 {
+            font-size: 2em;
+            margin: 0;
+            margin: 5px 0 4px 0;
+            margin-right: 22px;
+
+          };
+        };
+        .save-block {
+          background: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 0 5px 0 28px;
+          clip-path: polygon(0 0, 0 100%, 0 85%, 5% 100%, 100% 100%, 100% 0);
+          p {
+            text-align: end;
+          }
+          h3 {
+            font-size: 2em;
+            margin: 0;
+          };
+        };
+      };
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 2.5px;
+        width: 50%;
+        .crits-block {
+          background: white;
+          display: flex;
+          flex-direction: column;
+          p {
+            padding-left: 5px;
+          };
+          .row {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 10px;
+          };
+          h3 {
+            font-size: 2em;
+          };
+          a {
+            font-size: 1.5em;
+          };
+        };
+        .addictions-block {
+          background: white;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 0;
+          p {
+            padding-left: 5px;
+          };
+          .row {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 12px;
+          };
+          h3 {
+            font-size: 2em;
+          };
+          a {
+            font-size: 1.5em;
+          };
+        };
+      };
     };
     .skill-block {
       display: flex;
@@ -227,8 +342,8 @@
       grid-area: skill;
       font-size: 1em;
       flex-wrap: wrap;
-      height: 660px;
-      background-color: @red;
+      height: 655px;
+      background-color: @color;
       padding: 10px 5px 0 5px;
       .skill-unit {
         display: flex;
@@ -236,8 +351,8 @@
         justify-content: space-between;
         align-items: center;
         background: white;
-        border-bottom: solid @red 5px;
-        border-right: solid @red 2px;
+        border-bottom: solid @color 5px;
+        border-right: solid @color 2px;
         .name {
           width: 80%;
           padding-left: 3px;
@@ -277,6 +392,26 @@
         background: white;
         width: 230px;
       }
+    };
+    .combat-block {
+      display: flex;
+      background-color: @color;
+      width: 710px;
+      .left {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        .title {
+          background-color: white;
+
+        };
+        .armor-block {
+
+        };
+      };
+      .weapons-block {
+
+      };
     };
     .num-input {width: 30px; text-align: center};
   };

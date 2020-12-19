@@ -47,5 +47,9 @@ Hooks.once("init", function() {
     const result = array.some(e => e == skill);
     return result;
   });
+  
+  Handlebars.registerHelper("halfRoundUp", function(value) {
+    return Math.ceil(value / 2);
+  });
 
 });
