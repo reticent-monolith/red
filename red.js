@@ -32,11 +32,19 @@ Hooks.once("init", function() {
   });
 
   Handlebars.registerHelper("isHeader", function(thing) {
-    console.log(thing)
     const array = [
-      "awareness", "body", "control", "edu", "fighting", "performance", "ranged", "social", "technique"
+      "awareness", "body", "control", "edu", "edu2", "fighting", "performance", "ranged", "social", "social2", "technique"
     ];
     const result = array.some(e => e == thing);
+    return result;
+  });
+
+  Handlebars.registerHelper("isEssential", function(skill) {
+    console.log(skill)
+    const array = [
+      "firstAid", "perception", "brawling", "evasion", "conversation", "humanPerception", "persuasion", "education", "stealth", "athletics", "concentration"
+    ];
+    const result = array.some(e => e == skill);
     return result;
   });
 

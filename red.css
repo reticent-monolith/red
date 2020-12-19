@@ -14,7 +14,7 @@
   visibility: hidden;
 }
 .multiskill-button {
-  height: 1.4em;
+  height: 1.25em;
   width: 40px;
   font-size: 1.2em;
   font-weight: bold;
@@ -71,7 +71,7 @@
   display: grid;
   grid-template-columns: 220px 60px repeat(3, 230px);
   grid-column-gap: 10px;
-  grid-template-rows: 550px 60px 200px;
+  grid-template-rows: 600px 60px 120px;
   grid-row-gap: 10px;
   grid-template-areas: "character stat skill skill skill" "humanity stat skill skill skill" "health health combat combat combat";
 }
@@ -137,7 +137,7 @@
 .red.edgerunner.sheet .sheet-content .info-block .notes-box textarea {
   border: none;
   width: 213px;
-  height: 153px;
+  height: 215px;
 }
 .red.edgerunner.sheet .sheet-content .info-block .notes-box textarea:focus {
   border: none;
@@ -231,7 +231,7 @@
   grid-area: skill;
   font-size: 1em;
   flex-wrap: wrap;
-  height: 620px;
+  height: 660px;
   background-color: hsl(2, 71%, 47%);
   padding: 10px 5px 0 5px;
 }
@@ -247,6 +247,9 @@
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .name {
   width: 80%;
   padding-left: 3px;
+}
+.red.edgerunner.sheet .sheet-content .skill-block .skill-unit .name.isEssential {
+  font-weight: bold;
 }
 .red.edgerunner.sheet .sheet-content .skill-block .skill-unit .level {
   width: 10%;

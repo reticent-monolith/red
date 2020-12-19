@@ -258,7 +258,7 @@
           {{!-- {{log (getProp (getProp ../data.skills obj) 'lvl')}} --}}
           {{!-- {{log (getProp ../data.stats (getProp (getProp ../data.skills obj) 'stat')) }} --}}
           <div class="skill-unit">
-            <span class="name">
+            <span class="name {{#if (isEssential obj)}}isEssential{{/if}}">
               {{sk.name}} <strong>({{loud sk.stat}})</strong>
             </span>
             {{#if sk.isMulti}}

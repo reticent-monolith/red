@@ -181,6 +181,7 @@
           "stat": "int",
           "cost": 1
         },
+        "edu2": "Education Skills",
         "gamble": {
           "name": "Gamble",
           "lvl": 0,
@@ -332,6 +333,7 @@
           "stat": "cool",
           "cost": 1
         },
+        "social2": "Social Skills",
         "personalGrooming": {
           "name": "Personal Grooming",
           "lvl": 0,
